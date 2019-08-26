@@ -27,7 +27,7 @@ export declare class EntityList<T> extends StatefulSubject<T[]> {
     push(item: T): Promise<any>;
     update(item: EntityOperation, value: T): Promise<any>;
     remove(item: EntityOperation): Promise<any>;
-    private _setUpObservable();
-    private _eventHook(eventType);
-    private _checkOperationCases(item, cases);
+    private _setUpObservable;
+    private _eventHook;
+    private _checkOperationCases;
 }

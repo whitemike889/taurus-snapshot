@@ -38,6 +38,7 @@ export declare class Staffing {
     /**
      * Retrieves the HttpService created to connect to the Bullhorn RestApi
      */
-    static http(): AxiosInstance;
+    static http(): Promise<AxiosInstance>;
+    static makeCall(): AxiosInstance;
     ping(): Promise<AxiosResponse>;
 }
