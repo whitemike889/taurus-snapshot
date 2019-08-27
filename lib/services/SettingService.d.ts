@@ -5,10 +5,13 @@ import { BullhornAllSettingsAndEntitlementsResponse } from '../types';
  */
 export declare class SettingService {
     http: AxiosInstance;
+    private readonly initialized;
+    private readonly allSettingsAndEntitlementsEndpoint;
     constructor();
+    initialize(): Promise<void>;
     getSettings(settings: string[]): Promise<{
         [key: string]: any;
     }>;
     getEntitlements(entity: string): Promise<string[]>;
-    getAllSettingsAndEntitlements(): Promise<BullhornAllSettingsAndEntitlementsResponse>;
+    getAllSettingsAndEntitlements(cached?: boolean): Promise<BullhornAllSettingsAndEntitlementsResponse>;
 }
